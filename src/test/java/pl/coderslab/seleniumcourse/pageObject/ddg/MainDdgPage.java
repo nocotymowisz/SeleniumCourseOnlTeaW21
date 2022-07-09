@@ -1,4 +1,4 @@
-package pl.coderslab.seleniumcourse.pageObject;
+package pl.coderslab.seleniumcourse.pageObject.ddg;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
