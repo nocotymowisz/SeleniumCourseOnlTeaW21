@@ -1,0 +1,17 @@
+Feature: Log in to Coders Lab educstion portal
+
+Scenario: Successful login into portal
+Given: Browser with open page at address https://lms.coderslab.pl
+When: Entered email address  on the email input box
+And: Entered password on the password input box
+And: Login button ("Zaloguj") clicked
+Then: The page contain heading "Twoje kursy"
+
+
+Feature: Opening first presentation on Java prework course
+
+Scenario: First presentation successfully opened
+Given: Loggen into Coders lab portal at address: https://lms.coderslab.pl/courses
+When: "Pokaż rozdziały" button on Prework section clicked
+And: "Wstęp do kursu" section clicked
+And:
