@@ -58,6 +58,7 @@ public class zz1_pageObjectSteps {
 
     @Then("New address is created")
     public void createNewAddress() {
+
         this.zz1_loginPageFactory.createNewAddress();
     }
     @And("^Verify the new address (.*)$")
@@ -70,6 +71,10 @@ public class zz1_pageObjectSteps {
         this.zz1_loginPageFactory.deleteAddress();
 
     }
-
+    @And("Check address deletion")
+    public void checkDeletion() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        this.zz1_loginPageFactory.deleteAddresCheck();
+    }
 
 }

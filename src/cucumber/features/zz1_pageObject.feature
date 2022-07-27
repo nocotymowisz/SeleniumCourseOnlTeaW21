@@ -11,7 +11,8 @@ Feature: Login, create and check address
     And Create new address using data <alias>, <address>, <city>, <zip_code>, <country>, <phone>
     Then New address is created
     And Verify the new address <city>
-#    Then Delete the new address
+    Then Delete the new address
+    And Check address deletion
 
     Examples:
       |email                       |password     |alias  |address |city  |zip_code|country       |phone   |

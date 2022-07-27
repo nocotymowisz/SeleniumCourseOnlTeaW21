@@ -47,14 +47,13 @@ public class Zz1_loginPageFactory {
     private WebElement saveButton;
 
     @FindBy(css = ".alert.alert-success")
-    private WebElement addressSuccessMessage;
+    private WebElement deleteSuccessMessage;
 
     @FindBy(className = "address-body")
     List<WebElement> allAddressBodies;
 
-//    @FindBy(xpath = "//a[@data-link-action=\"delete-address\"]")
-//    private WebElement deleteButton;
-
+    @FindBy(xpath = "//a[@data-link-action=\"delete-address\"]")
+    private WebElement deleteButton;
 
 
     public Zz1_loginPageFactory(WebDriver driver) {
@@ -62,7 +61,6 @@ public class Zz1_loginPageFactory {
         PageFactory.initElements(driver, this);
     }
 
-    }
 
     public void signInIconClick() {
         signInIcon.click();
@@ -110,6 +108,14 @@ public class Zz1_loginPageFactory {
         }
     }
 
-//    public void deleteAddress() {
-//        deleteButton.click();
-//}
+    public void deleteAddress() {
+        deleteButton.click();
+    }
+
+    public void deleteAddresCheck() {
+        String expectedPhrase = "deleted";
+        if (!deleteSuccessMessage.getText().toLowerCase().contains(expectedPhrase.toLowerCase())) {
+            fail(String.format("Address is NOT succesfully deleted"));
+        }
+    }
+}
