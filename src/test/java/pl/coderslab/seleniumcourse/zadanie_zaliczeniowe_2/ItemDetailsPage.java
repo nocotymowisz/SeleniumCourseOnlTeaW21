@@ -17,13 +17,14 @@ public class ItemDetailsPage {
     }
 
         public void setQuantity(String quantity) {
-            WebElement setquantity = driver.findElement(By.name("qty"));
-            setquantity.clear();
-            setquantity.sendKeys(quantity);
-        }
+            WebElement setquantity = driver.findElement(By.id("quantity_wanted"));
+                setquantity.clear();
+                setquantity.sendKeys(quantity);
+            }
+
 
     public void addToCart() {
-        WebElement addToCart = driver.findElement(By.name("add"));
+        WebElement addToCart = driver.findElement(By.cssSelector(".btn.btn-primary.add-to-cart"));
         addToCart.click();
     }
 }
