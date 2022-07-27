@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class Zz1_loginPageFactory {
+public class Zadanie_zal_1_loginPageFactory {
 
     @FindBy(xpath = "//*[contains(text(),\"Sign in\")]")
     private WebElement signInIcon;
@@ -56,7 +56,7 @@ public class Zz1_loginPageFactory {
     private WebElement deleteButton;
 
 
-    public Zz1_loginPageFactory(WebDriver driver) {
+    public Zadanie_zal_1_loginPageFactory(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
     }
