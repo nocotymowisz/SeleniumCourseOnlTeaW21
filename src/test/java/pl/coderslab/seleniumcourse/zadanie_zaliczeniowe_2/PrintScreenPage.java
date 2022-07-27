@@ -20,7 +20,7 @@ public class PrintScreenPage {
 
         File tmpScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String currentDateTime = LocalDateTime.now().toString().replaceAll(":", "_");
-        Files.copy(tmpScreenshot.toPath(), Paths.get("C:", "test-evidence", "ddg-search-" + currentDateTime + ".png"));
+        Files.copy(tmpScreenshot.toPath(), Paths.get("C:", "test-evidence", "orderConfirm-" + currentDateTime + ".png"));
     }
 }
 
